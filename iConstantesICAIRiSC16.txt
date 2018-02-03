@@ -1,0 +1,41 @@
+﻿-- Constantes para el microprocesador ICAI-RiSC-16
+library ieee;
+use ieee.std_logic_1164.all;
+
+package ConstantesICAIRiSC16 is
+
+  -- Códigos de operación (el 010 está libre para futuras ampliaciones)
+  --constant c_arit : std_logic_vector(2 downto 0) := "000";
+  --constant c_addi : std_logic_vector(2 downto 0) := "001";
+  --constant c_lui  : std_logic_vector(2 downto 0) := "011";
+  --constant c_sw   : std_logic_vector(2 downto 0) := "100";
+  --constant c_lw   : std_logic_vector(2 downto 0) := "101";
+  --constant c_beq  : std_logic_vector(2 downto 0) := "110";
+  --constant c_jalr : std_logic_vector(2 downto 0) := "111";
+
+ constant c_arit : std_logic_vector(3 downto 0) := "0000";
+ constant c_addi : std_logic_vector(3 downto 0) := "0001";
+ constant c_lui : std_logic_vector(3 downto 0) := "0011";
+ constant c_beq : std_logic_vector(3 downto 0) := "0100";
+ constant c_bne : std_logic_vector(3 downto 0) := "0101";
+ constant c_jalr : std_logic_vector(3 downto 0) := "0111";
+ constant c_lb : std_logic_vector(3 downto 0) := "1001";
+ constant c_lw : std_logic_vector(3 downto 0) := "1011";
+ constant c_sb : std_logic_vector(3 downto 0) := "1101";
+ constant c_sw : std_logic_vector(3 downto 0) := "1111";
+
+  -- Códigos de operación de la ALU
+  constant c_add  : std_logic_vector(3 downto 0) := "0000";
+  constant c_sub  : std_logic_vector(3 downto 0) := "0001";
+  constant c_mul  : std_logic_vector(3 downto 0) := "0010";
+  constant c_mulu : std_logic_vector(3 downto 0) := "0011";
+  constant c_nand : std_logic_vector(3 downto 0) := "0100";
+  constant c_sll  : std_logic_vector(3 downto 0) := "0101";
+  constant c_sra  : std_logic_vector(3 downto 0) := "0110";
+  constant c_srl  : std_logic_vector(3 downto 0) := "0111";
+  constant c_sltu : std_logic_vector(3 downto 0) := "1000";
+ -- Añado el código de SLT aquí
+  constant c_slt : std_logic_vector(3 downto 0) := "1001";
+ 
+
+end ConstantesICAIRiSC16;
